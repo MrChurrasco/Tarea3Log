@@ -5,10 +5,10 @@ import random
 import mmh3
 from bitarray import bitarray
 
-#The optimal number of hash functions is k = (m/n)*ln(2), 
+#The optimal number of hash functions is k = int ((m/n)*ln(2))
 #where m is the size of the bit array and n is the number of items to be inserted in the filter.
 
-#the optimal size of the bit array is m = -(n*ln(p))/(ln(2)^2),
+#the optimal size of the bit array is m = int(-(n*ln(p))/(ln(2)^2)),
 #where p is the desired false positive probability.
 
 #The probability of false positives is given by the equation (1 - (1 - 1/m)^(kn))^k
